@@ -1,5 +1,5 @@
 # text2cron
-Project aims to simplify tasks schedulesConvert a text phrase to a cron schedule expression.
+Convert a word phrase to a cron schedule expression. Make it easy for non-technical people to use cron expressions to schedule cron tasks.
 
 ## Examples
 Verbose phrase
