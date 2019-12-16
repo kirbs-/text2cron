@@ -28,7 +28,7 @@ class CronExp():
         self._time_to_hours_minutes()
             
     def _day_to_int(self, day_of_week):
-        return DAYS_OF_WEEK[day_of_week.lower()[:3]]
+        return CronExp.DAYS_OF_WEEK[day_of_week.lower()[:3]]
     
     @property
     def utc(self):
@@ -39,7 +39,7 @@ class CronExp():
             return 'TZ'
         elif '@' in token:
             return 'TIME'
-        elif token[0:3].lower() in DAYS_OF_WEEK:
+        elif token[0:3].lower() in CronExp.DAYS_OF_WEEK:
             return 'DAY_OF_WEEK'
         else:
             return 'DAY_OF_MONTH'
@@ -54,8 +54,8 @@ class CronExp():
             self.minute = self.time[1]
             
     def _tz(self, timezone):
-        if timezone in TZ:
-            timezone = TZ[timezone]
+        if timezone in CronExp.TZ:
+            timezone = CronExp.TZ[timezone]
         return timezone
     
     def __str__(self):
