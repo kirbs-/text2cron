@@ -8,7 +8,7 @@ Verbose phrase
 >>> phrase = 'Tuesdays @1pm'
 >>> cron_expression = CronExp(schedule_phrase = phrase)
 >>> cron_expression
-Tues @1am CT cron expression '0 1 * * 2'
+'Tues @1am CT cron expression "0 1 * * 2"'
 
 >>> str(cron_expression)
 '0 1 * * 2'
